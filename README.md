@@ -135,20 +135,20 @@ second run result: Load Balancer 1, Caching-Server-Ip=10.5.0.6
 Run **'Siege'** container with command:
 
 ```
-siege -c25 -t15S "http://cdn.zhuk.com/cat.jpg"
+siege -c255 -t15S "http://cdn.zhuk.com/cat.jpg"
 ```
 
 |                         | With Cache + Least Conn | With Cache + Round Robin | Without Cache + Least Conn | Without Cache + Round Robin |
 |-------------------------|-------------------------|--------------------------|----------------------------|:---------------------------:|
-| Transactions            | 1414 hits               | 1421 hits                |                
-| Availability            | 100.00 %                | 100.00 %                 |                
-| Elapsed time            | 14.60 secs              | 14.55 secs               |                
-| Data transferred        | 316.60 MB               | 318.17 MB                |            
-| Response time           | 0.01 secs               | 0.01 secs                |               
-| Transaction rate        | 96.85 trans/sec         | 97.66 trans/sec          |            
-| Throughput              | 21.69 MB/sec            | 21.87 MB/sec             |                  
-| Concurrency             | 0.94                    | 0.87                     |                 
-| Successful transactions | 1414                    | 1421                     |     
-| Failed transactions     | 0                       | 0                        |         
-| Longest transaction     | 0.25                    | 0.23                     |         
-| Shortest transaction    | 0.00                    | 0.00                     |        	
+| Transactions            | 6502 hits               | 6443 hits                | 4144 hits                  |          3087 hits          |
+| Availability            | 100.00 %                | 100.00 %                 | 100.00 %                   |          100.00 %           |
+| Elapsed time            | 14.86 secs              | 14.11 secs               | 14.25 secs                 |         14.51 secs          |
+| Data transferred        | 1455.83 MB              | 1442.62 MB               | 927.86 MB                  |          691.20 MB          |
+| Response time           | 0.31 secs               | 0.30 secs                | 0.61 secs                  |          0.90 secs          |
+| Transaction rate        | 437.55 trans/sec        | 456.63 trans/sec         | 290.81 trans/sec           |      212.75 trans/sec       |
+| Throughput              | 97.97 MB/sec            | 102.24 MB/sec            | 65.11 MB/sec               |        47.64 MB/sec         |
+| Concurrency             | 134.93                  | 135.92                   | 177.41                     |           191.37            |
+| Successful transactions | 6502                    | 6443                     | 4144                       |            3087             |
+| Failed transactions     | 0                       | 0                        | 0                          |              0              |
+| Longest transaction     | 1.64                    | 1.68                     | 3.94                       |            4.22             |
+| Shortest transaction    | 0                       | 0.00                     | 0.00                       |            0.01             |

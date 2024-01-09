@@ -109,7 +109,7 @@ services:
   siege:
     image: ecliptik/docker-siege
     dns: 10.5.0.2
-    command: siege -c25 -t15S "http://cdn.zhuk.com/cat.jpg"
+    command: siege -c255 -t15S "http://cdn.zhuk.com/cat.jpg"
     networks:
       cdnnetwork:
         ipv4_address: 10.5.0.10
