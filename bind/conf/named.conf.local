@@ -1,0 +1,17 @@
+include "/etc/bind/geoip/GeoIP.acl";
+
+view "north_america" {
+  match-clients { US; CA; MX;};
+
+  zone "cdn.zhuk.com" {
+      type master;
+      file "/etc/bind/zones/db.cdn.zhuk.com-north-america";
+  };
+};
+
+view "other" {
+     zone "cdn.zhuk.com" {
+         type master;
+         file "/etc/bind/zones/db.cdn.zhuk.com";
+     };
+};
